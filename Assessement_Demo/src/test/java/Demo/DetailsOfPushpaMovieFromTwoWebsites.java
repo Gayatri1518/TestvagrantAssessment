@@ -1,6 +1,7 @@
 package Demo;
 
-import java.util.concurrent.TimeUnit;import org.openqa.selenium.By;
+import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -46,6 +47,9 @@ public class DetailsOfPushpaMovieFromTwoWebsites
 		//fetching country details
 		countryFromIMDB=driver.findElement(By.xpath("//li[@data-testid='title-details-origin']/descendant::a")).getText();
 	    System.out.println(countryFromIMDB);
+	    
+	    //close the browser
+	    driver.quit();
 	}
 	
 	/*
@@ -75,6 +79,10 @@ public class DetailsOfPushpaMovieFromTwoWebsites
 		//fetching country details
 		countryFromWiki=driver.findElement(By.xpath("//table[@class='infobox vevent']/tbody/tr/th[text()='Country']/following-sibling::td")).getText();
 	    System.out.println(countryFromWiki);
+	    
+	    //close the browser
+	    driver.quit();
+	    
 	  }
 	
 	/*
